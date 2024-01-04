@@ -69,19 +69,10 @@
             text-align: center;
         }
 
-        footer {
-            background-color: #fff;
-            color: #333;
-            padding: 10px;
+        .copyright-text {
+            margin-top: 20px;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .footer-hide {
-            transform: translateY(100%);
+            color: #555;
         }
 
         /* Media query for responsive layout */
@@ -129,24 +120,11 @@
             </div>
         </div>
     </div>
+
+    <div class="copyright-text">
+        <p>&copy; 2024 ST7 SURVEILLANCE SOLUTIONS. All rights reserved.</p>
+    </div>
 </div>
-
-<footer id="mainFooter">
-    <p>&copy; 2024 ST7 SURVEILLANCE SOLUTIONS. All rights reserved.</p>
-</footer>
-
-<script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function() {
-        var currentScrollPos = window.pageYOffset;
-        if (prevScrollpos > currentScrollPos) {
-            document.getElementById("mainFooter").style.transform = "translateY(0)";
-        } else {
-            document.getElementById("mainFooter").style.transform = "translateY(100%)";
-        }
-        prevScrollpos = currentScrollPos;
-    }
-</script>
 
 </body>
 </html>
