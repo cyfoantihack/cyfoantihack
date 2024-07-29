@@ -9,77 +9,123 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            overflow-x: hidden;
+            background-color: #0d47a1;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .container {
             text-align: center;
-            padding: 50px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
         }
 
-        img {
-            max-width: 100%;
+        .logo {
+            width: 120px;
             height: auto;
-            display: block;
             margin: 0 auto;
         }
 
-        .welcome-text {
-            font-size: 24px;
+        .intro-text {
+            font-size: 2em;
             margin-top: 20px;
-            color: #333;
+            color: #ffeb3b;
         }
 
-        .security-text {
-            font-size: 18px;
-            margin-top: 20px;
-            color: #555;
+        .info-text {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #bbdefb;
         }
 
-        .card-container {
+        .cards-wrapper {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 30px;
+            justify-content: center;
+            margin-top: 40px;
         }
 
         .card {
-            width: 30%;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            background-color: #1e88e5;
+            width: 300px;
+            border-radius: 12px;
             overflow: hidden;
             margin: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
         }
 
         .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .card img {
-            max-width: 100%;
+            width: 100%;
             height: auto;
-            flex: 1;
         }
 
         .card-text {
-            padding: 15px;
-            text-align: center;
+            padding: 20px;
+            text-align: left;
         }
 
-        .copyright-text {
+        .card-title {
+            font-size: 1.5em;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 1em;
+            color: #e3f2fd;
+        }
+
+        .additional-info {
+            background-color: #1565c0;
+            padding: 20px;
             margin-top: 20px;
-            text-align: center;
-            color: #555;
+            border-radius: 12px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+        }
+
+        .additional-info h2 {
+            font-size: 1.5em;
+            color: #ffeb3b;
+        }
+
+        .additional-info p {
+            font-size: 1em;
+            color: #bbdefb;
+            margin-top: 10px;
+        }
+
+        .footer-text {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #bbdefb;
         }
 
         @media screen and (max-width: 768px) {
             .card {
                 width: 90%;
+            }
+
+            .intro-text {
+                font-size: 1.5em;
+            }
+
+            .info-text {
+                font-size: 1em;
+            }
+
+            .additional-info {
+                width: 100%;
             }
         }
     </style>
@@ -87,42 +133,48 @@
 <body>
 
 <div class="container">
-    <img src="https://firebasestorage.googleapis.com/v0/b/st7-surveillance-solutions.appspot.com/o/applogo%2Ficon.png?alt=media&token=e1023cf0-8358-461c-bde8-486f6b97fe26" alt="CyfoAntiHack Logo">
-    <div class="welcome-text">
-        <p>Welcome to Cyfo browser</p>
+    <div class="intro-text">
+        Welcome to Cyfo Browser
     </div>
-    <div class="security-text">
-        <p>Your security is our top priority. Cyfo browser does not store any data, ensuring your privacy and confidentiality.</p>
+    <div class="info-text">
+        Your enhanced safety and security are our top priorities. Cyfo browser ensures maximum privacy for all users.
     </div>
 
-    <div class="card-container">
+    <div class="cards-wrapper">
         <div class="card">
-            <img src="https://firebasestorage.googleapis.com/v0/b/st7-surveillance-solutions.appspot.com/o/applogo%2FUnknown.jpeg?alt=media&token=008430e2-8fda-42c4-a63e-6e7c6a0ae499" alt="Cybersecurity Image 1">
+            <img src="https://firebasestorage.googleapis.com/v0/b/st7-surveillance-solutions.appspot.com/o/applogo%2FUnknown.jpeg?alt=media&token=008430e2-8fda-42c4-a63e-6e7c6a0ae499" alt="Enhanced Safety">
             <div class="card-text">
-                <p>Cybersecurity Measures</p>
-                <p>Advanced security protocols to protect your online presence. Our team of experts is dedicated to ensuring your digital safety.</p>
+                <div class="card-title">Enhanced Safety</div>
+                <div class="card-description">Our advanced safety protocols are designed to protect your digital life. Experience top-notch security measures tailored to your needs.</div>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://firebasestorage.googleapis.com/v0/b/st7-surveillance-solutions.appspot.com/o/applogo%2Fcyber.jpeg?alt=media&token=df8582cf-99a6-435d-9ad6-c09cbdb5ecfc" alt="Cybersecurity Image 2">
+            <img src="https://firebasestorage.googleapis.com/v0/b/st7-surveillance-solutions.appspot.com/o/applogo%2Fcyber.jpeg?alt=media&token=df8582cf-99a6-435d-9ad6-c09cbdb5ecfc" alt="Data Security">
             <div class="card-text">
-                <p>Data Encryption</p>
-                <p>Ensuring your data remains confidential through robust encryption methods. We employ state-of-the-art encryption technologies to safeguard your information.</p>
+                <div class="card-title">Data Security</div>
+                <div class="card-description">Your data remains confidential with our robust encryption methods. We prioritize your privacy and ensure the highest level of data security.</div>
             </div>
         </div>
 
         <div class="card">
-            <img src="https://firebasestorage.googleapis.com/v0/b/st7-surveillance-solutions.appspot.com/o/applogo%2Fcyber1.jpeg?alt=media&token=9dd75f53-606e-485d-9f68-9e31ce6287a7" alt="Cybersecurity Image 3">
+            <img src="https://firebasestorage.googleapis.com/v0/b/st7-surveillance-solutions.appspot.com/o/applogo%2Fcyber1.jpeg?alt=media&token=9dd75f53-606e-485d-9f68-9e31ce6287a7" alt="Privacy Protection">
             <div class="card-text">
-                <p>Threat Detection</p>
-                <p>Constantly monitoring for potential threats to keep you secure online. Our advanced threat detection system ensures early identification and prevention of cyber threats.</p>
+                <div class="card-title">Privacy Protection</div>
+                <div class="card-description">We continuously monitor for potential threats to maintain your privacy. Our sophisticated threat detection system identifies and neutralizes risks before they impact you.</div>
             </div>
         </div>
     </div>
 
-    <div class="copyright-text">
-        <p>&copy; 2024 ST7 SURVEILLANCE SOLUTIONS. All rights reserved.</p>
+    <div class="additional-info">
+        <h2>Why Choose Cyfo Browser?</h2>
+        <p>At Cyfo, we are committed to providing a secure and private browsing experience. Our browser is built with state-of-the-art security features to ensure that your data is protected at all times.</p>
+        <p>We do not store any of your browsing data, ensuring complete confidentiality and peace of mind. Our enhanced encryption protocols safeguard your information, making it inaccessible to unauthorized parties.</p>
+        <p>Our dedicated team constantly monitors for potential threats, ensuring that you are protected from the latest cyber threats. Choose Cyfo Browser for a safe, secure, and private internet experience.</p>
+    </div>
+
+    <div class="footer-text">
+        &copy; 2024 ST7 SURVEILLANCE SOLUTIONS. All rights reserved.
     </div>
 </div>
 
