@@ -19,8 +19,9 @@
         .container {
             text-align: center;
             padding: 20px;
-            max-width: 1200px;
+            max-width: 100%;
             width: 100%;
+            box-sizing: border-box;
         }
 
         .logo {
@@ -30,30 +31,31 @@
         }
 
         .intro-text {
-            font-size: 2em;
+            font-size: 1.5em;
             margin-top: 20px;
             color: #ffeb3b;
         }
 
         .info-text {
-            font-size: 1.2em;
+            font-size: 1em;
             margin-top: 10px;
             color: #bbdefb;
         }
 
         .cards-wrapper {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 40px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
         }
 
         .card {
             background-color: #1e88e5;
-            width: 300px;
+            width: 90%;
+            max-width: 300px;
             border-radius: 12px;
             overflow: hidden;
-            margin: 10px;
+            margin: 10px 0;
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
@@ -75,13 +77,13 @@
         }
 
         .card-title {
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: #fff;
             margin-bottom: 10px;
         }
 
         .card-description {
-            font-size: 1em;
+            font-size: 0.9em;
             color: #e3f2fd;
         }
 
@@ -92,40 +94,54 @@
             border-radius: 12px;
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
             width: 90%;
+            max-width: 800px;
+            box-sizing: border-box;
         }
 
         .additional-info h2 {
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: #ffeb3b;
         }
 
         .additional-info p {
-            font-size: 1em;
+            font-size: 0.9em;
             color: #bbdefb;
             margin-top: 10px;
         }
 
         .footer-text {
-            margin-top: 40px;
-            font-size: 0.9em;
+            margin-top: 20px;
+            font-size: 0.8em;
             color: #bbdefb;
         }
 
-        @media screen and (max-width: 768px) {
-            .card {
-                width: 90%;
-            }
-
+        @media screen and (min-width: 768px) {
             .intro-text {
-                font-size: 1.5em;
+                font-size: 2em;
             }
 
             .info-text {
+                font-size: 1.2em;
+            }
+
+            .card-title {
+                font-size: 1.5em;
+            }
+
+            .card-description {
                 font-size: 1em;
             }
 
-            .additional-info {
-                width: 100%;
+            .additional-info h2 {
+                font-size: 1.5em;
+            }
+
+            .additional-info p {
+                font-size: 1em;
+            }
+
+            .footer-text {
+                font-size: 0.9em;
             }
         }
     </style>
